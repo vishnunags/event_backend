@@ -20,11 +20,11 @@ module.exports = {
         }
     },
 
-    async createRegistration(eventId, name, contact, email) {
+    async createRegistration(eventName, name, contact, email) {
         try {
             const [result] = await pool.query(
-                'INSERT INTO registrations (event_id, name, contact, email) VALUES (?, ?, ?, ?)',
-                [eventId, name, contact, email]
+                'INSERT INTO registrations (event_name, name, contact, email) VALUES (?, ?, ?, ?)',
+                [eventName, name, contact, email]
             );
             return result.insertId;
         } catch (error) {
