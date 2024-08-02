@@ -38,4 +38,4 @@ jobs:
 
       - name: Restart PM2
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@ec2-34-205-29-69.compute-1.amazonaws.com 'cd /home/ec2-user/event/event_backend && pm2 start server.js'
+          ssh -o StrictHostKeyChecking=no ec2-user@ec2-34-205-29-69.compute-1.amazonaws.com 'cd /home/ec2-user/event/event_backend && pm2 restart server.js'
